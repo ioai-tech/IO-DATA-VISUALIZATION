@@ -1,0 +1,1577 @@
+Panels:
+  - Class: rviz/Displays
+    Help Height: 78
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /Status1
+        - /MarkerArray1
+        - /fisheye1
+        - /main_depth1
+        - /TF1/Frames1
+        - /TF1/Tree1
+      Splitter Ratio: 0.5
+    Tree Height: 194
+  - Class: rviz/Selection
+    Name: Selection
+  - Class: rviz/Tool Properties
+    Expanded:
+      - /2D Pose Estimate1
+      - /2D Nav Goal1
+      - /Publish Point1
+    Name: Tool Properties
+    Splitter Ratio: 0.5886790156364441
+  - Class: rviz/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+  - Class: rviz/Time
+    Name: Time
+    SyncMode: 0
+    SyncSource: touch
+Preferences:
+  PromptSaveOnExit: true
+Toolbars:
+  toolButtonStyle: 2
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.5
+      Cell Size: 1
+      Class: rviz/Grid
+      Color: 160; 160; 164
+      Enabled: true
+      Line Style:
+        Line Width: 0.029999999329447746
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 10
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Class: rviz/MarkerArray
+      Enabled: true
+      Marker Topic: /visualization_marker
+      Name: MarkerArray
+      Namespaces:
+        foot_force: true
+      Queue Size: 100
+      Value: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_Head_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_Head_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_Head_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_Hips_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_Hips_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_Hips_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_LeftArm_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftArm_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftArm_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_LeftFoot_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftFoot_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftFoot_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_LeftForeArm_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftForeArm_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftForeArm_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_LeftHandIndex1_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftHandIndex1_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftHandIndex1_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_LeftHandIndex2_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftHandIndex2_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftHandIndex2_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_LeftHandIndex3_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftHandIndex3_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftHandIndex3_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_LeftHandMiddle1_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftHandMiddle1_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftHandMiddle1_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_LeftHandMiddle2_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftHandMiddle2_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftHandMiddle2_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_LeftHandMiddle3_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftHandMiddle3_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftHandMiddle3_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_LeftHandPinky1_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftHandPinky1_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftHandPinky1_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_LeftHandPinky2_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftHandPinky2_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftHandPinky2_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_LeftHandPinky3_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftHandPinky3_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftHandPinky3_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_LeftHandRing1_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftHandRing1_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftHandRing1_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_LeftHandRing2_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftHandRing2_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftHandRing2_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_LeftHandRing3_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftHandRing3_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftHandRing3_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_LeftHandThumb1_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftHandThumb1_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftHandThumb1_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_LeftHandThumb2_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftHandThumb2_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftHandThumb2_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_LeftHandThumb3_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftHandThumb3_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftHandThumb3_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_LeftHand_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftHand_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftHand_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_LeftInHandIndex_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftInHandIndex_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftInHandIndex_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_LeftInHandMiddle_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftInHandMiddle_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftInHandMiddle_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_LeftInHandPinky_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftInHandPinky_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftInHandPinky_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_LeftInHandRing_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftInHandRing_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftInHandRing_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_LeftLeg_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftLeg_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftLeg_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_LeftShoulder_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftShoulder_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftShoulder_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_LeftUpLeg_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftUpLeg_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_LeftUpLeg_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_Neck1_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_Neck1_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_Neck1_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_Neck_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_Neck_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_Neck_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_Realsense_Camera:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightArm_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightArm_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightArm_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_RightFoot_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightFoot_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightFoot_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_RightForeArm_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightForeArm_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightForeArm_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_RightHandIndex1_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightHandIndex1_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightHandIndex1_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_RightHandIndex2_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightHandIndex2_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightHandIndex2_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_RightHandIndex3_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightHandIndex3_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightHandIndex3_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_RightHandMiddle1_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightHandMiddle1_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightHandMiddle1_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_RightHandMiddle2_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightHandMiddle2_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightHandMiddle2_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_RightHandMiddle3_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightHandMiddle3_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightHandMiddle3_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_RightHandPinky1_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightHandPinky1_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightHandPinky1_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_RightHandPinky2_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightHandPinky2_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightHandPinky2_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_RightHandPinky3_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightHandPinky3_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightHandPinky3_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_RightHandRing1_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightHandRing1_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightHandRing1_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_RightHandRing2_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightHandRing2_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightHandRing2_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_RightHandRing3_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightHandRing3_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightHandRing3_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_RightHandThumb1_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightHandThumb1_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightHandThumb1_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_RightHandThumb2_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightHandThumb2_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightHandThumb2_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_RightHandThumb3_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightHandThumb3_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightHandThumb3_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_RightHand_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightHand_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightHand_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_RightInHandIndex_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightInHandIndex_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightInHandIndex_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_RightInHandMiddle_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightInHandMiddle_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightInHandMiddle_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_RightInHandPinky_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightInHandPinky_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightInHandPinky_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_RightInHandRing_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightInHandRing_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightInHandRing_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_RightLeg_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightLeg_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightLeg_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_RightShoulder_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightShoulder_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightShoulder_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_RightUpLeg_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightUpLeg_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_RightUpLeg_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_Spine1_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_Spine1_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_Spine1_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_Spine2_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_Spine2_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_Spine2_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_Spine_P:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_Spine_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        link_Spine_Y:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: RobotModel
+      Robot Description: robot_description
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Class: rviz/Image
+      Enabled: true
+      Image Topic: /usb_cam_fisheye/image_decoded
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: fisheye
+      Normalize Range: true
+      Queue Size: 2
+      Transport Hint: compressed
+      Unreliable: false
+      Value: true
+    - Class: rviz/Image
+      Enabled: true
+      Image Topic: /color/image_raw
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: main_rgb
+      Normalize Range: true
+      Queue Size: 2
+      Transport Hint: compressed
+      Unreliable: false
+      Value: true
+    - Class: rviz/Image
+      Enabled: true
+      Image Topic: /csi_camera_0/image_raw
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: csi0
+      Normalize Range: true
+      Queue Size: 2
+      Transport Hint: compressed
+      Unreliable: false
+      Value: true
+    - Class: rviz/Image
+      Enabled: true
+      Image Topic: /csi_camera_1/image_raw
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: csi1
+      Normalize Range: true
+      Queue Size: 2
+      Transport Hint: compressed
+      Unreliable: false
+      Value: true
+    - Class: rviz/Image
+      Enabled: true
+      Image Topic: /depth/image_raw
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: main_depth
+      Normalize Range: true
+      Queue Size: 2
+      Transport Hint: raw
+      Unreliable: false
+      Value: true
+    - Class: rviz/TF
+      Enabled: true
+      Filter (blacklist): ""
+      Filter (whitelist): ""
+      Frame Timeout: 15
+      Frames:
+        All Enabled: false
+        base_link:
+          Value: false
+        link_Head_P:
+          Value: false
+        link_Head_R:
+          Value: false
+        link_Head_Y:
+          Value: true
+        link_Hips_P:
+          Value: false
+        link_Hips_R:
+          Value: false
+        link_Hips_Y:
+          Value: false
+        link_LeftArm_P:
+          Value: false
+        link_LeftArm_R:
+          Value: false
+        link_LeftArm_Y:
+          Value: false
+        link_LeftFoot_P:
+          Value: false
+        link_LeftFoot_R:
+          Value: false
+        link_LeftFoot_Y:
+          Value: false
+        link_LeftForeArm_P:
+          Value: false
+        link_LeftForeArm_R:
+          Value: false
+        link_LeftForeArm_Y:
+          Value: false
+        link_LeftHandIndex1_P:
+          Value: false
+        link_LeftHandIndex1_R:
+          Value: false
+        link_LeftHandIndex1_Y:
+          Value: false
+        link_LeftHandIndex2_P:
+          Value: false
+        link_LeftHandIndex2_R:
+          Value: false
+        link_LeftHandIndex2_Y:
+          Value: false
+        link_LeftHandIndex3_P:
+          Value: false
+        link_LeftHandIndex3_R:
+          Value: false
+        link_LeftHandIndex3_Y:
+          Value: false
+        link_LeftHandMiddle1_P:
+          Value: false
+        link_LeftHandMiddle1_R:
+          Value: false
+        link_LeftHandMiddle1_Y:
+          Value: false
+        link_LeftHandMiddle2_P:
+          Value: false
+        link_LeftHandMiddle2_R:
+          Value: false
+        link_LeftHandMiddle2_Y:
+          Value: false
+        link_LeftHandMiddle3_P:
+          Value: false
+        link_LeftHandMiddle3_R:
+          Value: false
+        link_LeftHandMiddle3_Y:
+          Value: false
+        link_LeftHandPinky1_P:
+          Value: false
+        link_LeftHandPinky1_R:
+          Value: false
+        link_LeftHandPinky1_Y:
+          Value: false
+        link_LeftHandPinky2_P:
+          Value: false
+        link_LeftHandPinky2_R:
+          Value: false
+        link_LeftHandPinky2_Y:
+          Value: false
+        link_LeftHandPinky3_P:
+          Value: false
+        link_LeftHandPinky3_R:
+          Value: false
+        link_LeftHandPinky3_Y:
+          Value: false
+        link_LeftHandRing1_P:
+          Value: false
+        link_LeftHandRing1_R:
+          Value: false
+        link_LeftHandRing1_Y:
+          Value: false
+        link_LeftHandRing2_P:
+          Value: false
+        link_LeftHandRing2_R:
+          Value: false
+        link_LeftHandRing2_Y:
+          Value: false
+        link_LeftHandRing3_P:
+          Value: false
+        link_LeftHandRing3_R:
+          Value: false
+        link_LeftHandRing3_Y:
+          Value: false
+        link_LeftHandThumb1_P:
+          Value: false
+        link_LeftHandThumb1_R:
+          Value: false
+        link_LeftHandThumb1_Y:
+          Value: false
+        link_LeftHandThumb2_P:
+          Value: false
+        link_LeftHandThumb2_R:
+          Value: false
+        link_LeftHandThumb2_Y:
+          Value: false
+        link_LeftHandThumb3_P:
+          Value: false
+        link_LeftHandThumb3_R:
+          Value: false
+        link_LeftHandThumb3_Y:
+          Value: false
+        link_LeftHand_P:
+          Value: false
+        link_LeftHand_R:
+          Value: false
+        link_LeftHand_Y:
+          Value: false
+        link_LeftInHandIndex_P:
+          Value: false
+        link_LeftInHandIndex_R:
+          Value: false
+        link_LeftInHandIndex_Y:
+          Value: false
+        link_LeftInHandMiddle_P:
+          Value: false
+        link_LeftInHandMiddle_R:
+          Value: false
+        link_LeftInHandMiddle_Y:
+          Value: false
+        link_LeftInHandPinky_P:
+          Value: false
+        link_LeftInHandPinky_R:
+          Value: false
+        link_LeftInHandPinky_Y:
+          Value: false
+        link_LeftInHandRing_P:
+          Value: false
+        link_LeftInHandRing_R:
+          Value: false
+        link_LeftInHandRing_Y:
+          Value: false
+        link_LeftLeg_P:
+          Value: false
+        link_LeftLeg_R:
+          Value: false
+        link_LeftLeg_Y:
+          Value: false
+        link_LeftShoulder_P:
+          Value: false
+        link_LeftShoulder_R:
+          Value: false
+        link_LeftShoulder_Y:
+          Value: false
+        link_LeftUpLeg_P:
+          Value: false
+        link_LeftUpLeg_R:
+          Value: false
+        link_LeftUpLeg_Y:
+          Value: false
+        link_Neck1_P:
+          Value: false
+        link_Neck1_R:
+          Value: false
+        link_Neck1_Y:
+          Value: false
+        link_Neck_P:
+          Value: false
+        link_Neck_R:
+          Value: false
+        link_Neck_Y:
+          Value: false
+        link_Realsense_Camera:
+          Value: false
+        link_RightArm_P:
+          Value: false
+        link_RightArm_R:
+          Value: false
+        link_RightArm_Y:
+          Value: false
+        link_RightFoot_P:
+          Value: false
+        link_RightFoot_R:
+          Value: false
+        link_RightFoot_Y:
+          Value: false
+        link_RightForeArm_P:
+          Value: false
+        link_RightForeArm_R:
+          Value: false
+        link_RightForeArm_Y:
+          Value: false
+        link_RightHandIndex1_P:
+          Value: false
+        link_RightHandIndex1_R:
+          Value: false
+        link_RightHandIndex1_Y:
+          Value: false
+        link_RightHandIndex2_P:
+          Value: false
+        link_RightHandIndex2_R:
+          Value: false
+        link_RightHandIndex2_Y:
+          Value: false
+        link_RightHandIndex3_P:
+          Value: false
+        link_RightHandIndex3_R:
+          Value: false
+        link_RightHandIndex3_Y:
+          Value: false
+        link_RightHandMiddle1_P:
+          Value: false
+        link_RightHandMiddle1_R:
+          Value: false
+        link_RightHandMiddle1_Y:
+          Value: false
+        link_RightHandMiddle2_P:
+          Value: false
+        link_RightHandMiddle2_R:
+          Value: false
+        link_RightHandMiddle2_Y:
+          Value: false
+        link_RightHandMiddle3_P:
+          Value: false
+        link_RightHandMiddle3_R:
+          Value: false
+        link_RightHandMiddle3_Y:
+          Value: false
+        link_RightHandPinky1_P:
+          Value: false
+        link_RightHandPinky1_R:
+          Value: false
+        link_RightHandPinky1_Y:
+          Value: false
+        link_RightHandPinky2_P:
+          Value: false
+        link_RightHandPinky2_R:
+          Value: false
+        link_RightHandPinky2_Y:
+          Value: false
+        link_RightHandPinky3_P:
+          Value: false
+        link_RightHandPinky3_R:
+          Value: false
+        link_RightHandPinky3_Y:
+          Value: false
+        link_RightHandRing1_P:
+          Value: false
+        link_RightHandRing1_R:
+          Value: false
+        link_RightHandRing1_Y:
+          Value: false
+        link_RightHandRing2_P:
+          Value: false
+        link_RightHandRing2_R:
+          Value: false
+        link_RightHandRing2_Y:
+          Value: false
+        link_RightHandRing3_P:
+          Value: false
+        link_RightHandRing3_R:
+          Value: false
+        link_RightHandRing3_Y:
+          Value: false
+        link_RightHandThumb1_P:
+          Value: false
+        link_RightHandThumb1_R:
+          Value: false
+        link_RightHandThumb1_Y:
+          Value: false
+        link_RightHandThumb2_P:
+          Value: false
+        link_RightHandThumb2_R:
+          Value: false
+        link_RightHandThumb2_Y:
+          Value: false
+        link_RightHandThumb3_P:
+          Value: false
+        link_RightHandThumb3_R:
+          Value: false
+        link_RightHandThumb3_Y:
+          Value: false
+        link_RightHand_P:
+          Value: false
+        link_RightHand_R:
+          Value: false
+        link_RightHand_Y:
+          Value: false
+        link_RightInHandIndex_P:
+          Value: false
+        link_RightInHandIndex_R:
+          Value: false
+        link_RightInHandIndex_Y:
+          Value: false
+        link_RightInHandMiddle_P:
+          Value: false
+        link_RightInHandMiddle_R:
+          Value: false
+        link_RightInHandMiddle_Y:
+          Value: false
+        link_RightInHandPinky_P:
+          Value: false
+        link_RightInHandPinky_R:
+          Value: false
+        link_RightInHandPinky_Y:
+          Value: false
+        link_RightInHandRing_P:
+          Value: false
+        link_RightInHandRing_R:
+          Value: false
+        link_RightInHandRing_Y:
+          Value: false
+        link_RightLeg_P:
+          Value: false
+        link_RightLeg_R:
+          Value: false
+        link_RightLeg_Y:
+          Value: false
+        link_RightShoulder_P:
+          Value: false
+        link_RightShoulder_R:
+          Value: false
+        link_RightShoulder_Y:
+          Value: false
+        link_RightUpLeg_P:
+          Value: false
+        link_RightUpLeg_R:
+          Value: false
+        link_RightUpLeg_Y:
+          Value: false
+        link_Spine1_P:
+          Value: false
+        link_Spine1_R:
+          Value: false
+        link_Spine1_Y:
+          Value: false
+        link_Spine2_P:
+          Value: false
+        link_Spine2_R:
+          Value: false
+        link_Spine2_Y:
+          Value: false
+        link_Spine_P:
+          Value: false
+        link_Spine_R:
+          Value: false
+        link_Spine_Y:
+          Value: false
+        world:
+          Value: false
+      Marker Alpha: 1
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        world:
+          base_link:
+            link_Hips_R:
+              link_Hips_P:
+                link_Hips_Y:
+                  link_LeftUpLeg_R:
+                    link_LeftUpLeg_P:
+                      link_LeftUpLeg_Y:
+                        link_LeftLeg_R:
+                          link_LeftLeg_P:
+                            link_LeftLeg_Y:
+                              link_LeftFoot_R:
+                                link_LeftFoot_P:
+                                  link_LeftFoot_Y:
+                                    {}
+                  link_RightUpLeg_R:
+                    link_RightUpLeg_P:
+                      link_RightUpLeg_Y:
+                        link_RightLeg_R:
+                          link_RightLeg_P:
+                            link_RightLeg_Y:
+                              link_RightFoot_R:
+                                link_RightFoot_P:
+                                  link_RightFoot_Y:
+                                    {}
+                  link_Spine_R:
+                    link_Spine_P:
+                      link_Spine_Y:
+                        link_Spine1_R:
+                          link_Spine1_P:
+                            link_Spine1_Y:
+                              link_Spine2_R:
+                                link_Spine2_P:
+                                  link_Spine2_Y:
+                                    link_LeftShoulder_R:
+                                      link_LeftShoulder_P:
+                                        link_LeftShoulder_Y:
+                                          link_LeftArm_R:
+                                            link_LeftArm_P:
+                                              link_LeftArm_Y:
+                                                link_LeftForeArm_R:
+                                                  link_LeftForeArm_P:
+                                                    link_LeftForeArm_Y:
+                                                      link_LeftHand_R:
+                                                        link_LeftHand_P:
+                                                          link_LeftHand_Y:
+                                                            link_LeftHandThumb1_R:
+                                                              link_LeftHandThumb1_P:
+                                                                link_LeftHandThumb1_Y:
+                                                                  link_LeftHandThumb2_R:
+                                                                    link_LeftHandThumb2_P:
+                                                                      link_LeftHandThumb2_Y:
+                                                                        link_LeftHandThumb3_R:
+                                                                          link_LeftHandThumb3_P:
+                                                                            link_LeftHandThumb3_Y:
+                                                                              {}
+                                                            link_LeftInHandIndex_R:
+                                                              link_LeftInHandIndex_P:
+                                                                link_LeftInHandIndex_Y:
+                                                                  link_LeftHandIndex1_R:
+                                                                    link_LeftHandIndex1_P:
+                                                                      link_LeftHandIndex1_Y:
+                                                                        link_LeftHandIndex2_R:
+                                                                          link_LeftHandIndex2_P:
+                                                                            link_LeftHandIndex2_Y:
+                                                                              link_LeftHandIndex3_R:
+                                                                                link_LeftHandIndex3_P:
+                                                                                  link_LeftHandIndex3_Y:
+                                                                                    {}
+                                                            link_LeftInHandMiddle_R:
+                                                              link_LeftInHandMiddle_P:
+                                                                link_LeftInHandMiddle_Y:
+                                                                  link_LeftHandMiddle1_R:
+                                                                    link_LeftHandMiddle1_P:
+                                                                      link_LeftHandMiddle1_Y:
+                                                                        link_LeftHandMiddle2_R:
+                                                                          link_LeftHandMiddle2_P:
+                                                                            link_LeftHandMiddle2_Y:
+                                                                              link_LeftHandMiddle3_R:
+                                                                                link_LeftHandMiddle3_P:
+                                                                                  link_LeftHandMiddle3_Y:
+                                                                                    {}
+                                                            link_LeftInHandPinky_R:
+                                                              link_LeftInHandPinky_P:
+                                                                link_LeftInHandPinky_Y:
+                                                                  link_LeftHandPinky1_R:
+                                                                    link_LeftHandPinky1_P:
+                                                                      link_LeftHandPinky1_Y:
+                                                                        link_LeftHandPinky2_R:
+                                                                          link_LeftHandPinky2_P:
+                                                                            link_LeftHandPinky2_Y:
+                                                                              link_LeftHandPinky3_R:
+                                                                                link_LeftHandPinky3_P:
+                                                                                  link_LeftHandPinky3_Y:
+                                                                                    {}
+                                                            link_LeftInHandRing_R:
+                                                              link_LeftInHandRing_P:
+                                                                link_LeftInHandRing_Y:
+                                                                  link_LeftHandRing1_R:
+                                                                    link_LeftHandRing1_P:
+                                                                      link_LeftHandRing1_Y:
+                                                                        link_LeftHandRing2_R:
+                                                                          link_LeftHandRing2_P:
+                                                                            link_LeftHandRing2_Y:
+                                                                              link_LeftHandRing3_R:
+                                                                                link_LeftHandRing3_P:
+                                                                                  link_LeftHandRing3_Y:
+                                                                                    {}
+                                    link_Neck_R:
+                                      link_Neck_P:
+                                        link_Neck_Y:
+                                          link_Neck1_R:
+                                            link_Neck1_P:
+                                              link_Neck1_Y:
+                                                link_Head_R:
+                                                  link_Head_P:
+                                                    link_Head_Y:
+                                                      {}
+                                                  link_Realsense_Camera:
+                                                    {}
+                                    link_RightShoulder_R:
+                                      link_RightShoulder_P:
+                                        link_RightShoulder_Y:
+                                          link_RightArm_R:
+                                            link_RightArm_P:
+                                              link_RightArm_Y:
+                                                link_RightForeArm_R:
+                                                  link_RightForeArm_P:
+                                                    link_RightForeArm_Y:
+                                                      link_RightHand_R:
+                                                        link_RightHand_P:
+                                                          link_RightHand_Y:
+                                                            link_RightHandThumb1_R:
+                                                              link_RightHandThumb1_P:
+                                                                link_RightHandThumb1_Y:
+                                                                  link_RightHandThumb2_R:
+                                                                    link_RightHandThumb2_P:
+                                                                      link_RightHandThumb2_Y:
+                                                                        link_RightHandThumb3_R:
+                                                                          link_RightHandThumb3_P:
+                                                                            link_RightHandThumb3_Y:
+                                                                              {}
+                                                            link_RightInHandIndex_R:
+                                                              link_RightInHandIndex_P:
+                                                                link_RightInHandIndex_Y:
+                                                                  link_RightHandIndex1_R:
+                                                                    link_RightHandIndex1_P:
+                                                                      link_RightHandIndex1_Y:
+                                                                        link_RightHandIndex2_R:
+                                                                          link_RightHandIndex2_P:
+                                                                            link_RightHandIndex2_Y:
+                                                                              link_RightHandIndex3_R:
+                                                                                link_RightHandIndex3_P:
+                                                                                  link_RightHandIndex3_Y:
+                                                                                    {}
+                                                            link_RightInHandMiddle_R:
+                                                              link_RightInHandMiddle_P:
+                                                                link_RightInHandMiddle_Y:
+                                                                  link_RightHandMiddle1_R:
+                                                                    link_RightHandMiddle1_P:
+                                                                      link_RightHandMiddle1_Y:
+                                                                        link_RightHandMiddle2_R:
+                                                                          link_RightHandMiddle2_P:
+                                                                            link_RightHandMiddle2_Y:
+                                                                              link_RightHandMiddle3_R:
+                                                                                link_RightHandMiddle3_P:
+                                                                                  link_RightHandMiddle3_Y:
+                                                                                    {}
+                                                            link_RightInHandPinky_R:
+                                                              link_RightInHandPinky_P:
+                                                                link_RightInHandPinky_Y:
+                                                                  link_RightHandPinky1_R:
+                                                                    link_RightHandPinky1_P:
+                                                                      link_RightHandPinky1_Y:
+                                                                        link_RightHandPinky2_R:
+                                                                          link_RightHandPinky2_P:
+                                                                            link_RightHandPinky2_Y:
+                                                                              link_RightHandPinky3_R:
+                                                                                link_RightHandPinky3_P:
+                                                                                  link_RightHandPinky3_Y:
+                                                                                    {}
+                                                            link_RightInHandRing_R:
+                                                              link_RightInHandRing_P:
+                                                                link_RightInHandRing_Y:
+                                                                  link_RightHandRing1_R:
+                                                                    link_RightHandRing1_P:
+                                                                      link_RightHandRing1_Y:
+                                                                        link_RightHandRing2_R:
+                                                                          link_RightHandRing2_P:
+                                                                            link_RightHandRing2_Y:
+                                                                              link_RightHandRing3_R:
+                                                                                link_RightHandRing3_P:
+                                                                                  link_RightHandRing3_Y:
+                                                                                    {}
+      Update Interval: 0
+      Value: true
+    - Class: rviz/Image
+      Enabled: true
+      Image Topic: /hand_visual
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: touch
+      Normalize Range: true
+      Queue Size: 2
+      Transport Hint: raw
+      Unreliable: false
+      Value: true
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Default Light: true
+    Fixed Frame: base_link
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz/Interact
+      Hide Inactive Objects: true
+    - Class: rviz/MoveCamera
+    - Class: rviz/Select
+    - Class: rviz/FocusCamera
+    - Class: rviz/Measure
+    - Class: rviz/SetInitialPose
+      Theta std deviation: 0.2617993950843811
+      Topic: /initialpose
+      X std deviation: 0.5
+      Y std deviation: 0.5
+    - Class: rviz/SetGoal
+      Topic: /move_base_simple/goal
+    - Class: rviz/PublishPoint
+      Single click: true
+      Topic: /clicked_point
+  Value: true
+  Views:
+    Current:
+      Class: rviz/Orbit
+      Distance: 3.1843631267547607
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.05999999865889549
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Field of View: 0.7853981852531433
+      Focal Point:
+        X: -0.23493032157421112
+        Y: -0.37864071130752563
+        Z: 0.6206710338592529
+      Focal Shape Fixed Size: false
+      Focal Shape Size: 0.05000000074505806
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 0.5653982758522034
+      Target Frame: <Fixed Frame>
+      Yaw: 1.0503982305526733
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: false
+  Height: 1536
+  Hide Left Dock: false
+  Hide Right Dock: true
+  QMainWindow State: 000000ff00000000fd0000000400000000000001f1000003b9fc0200000009fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c00610079007301000001e60000014d000000c900fffffffb0000000a0074006f0075006300680100000339000002660000001600fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f00000562fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000003d00000562000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b2000000000000000000000002000009b8000001a3fc010000000afb00000014007500730062005f00630061006d005f003000320000000000000003640000000000000000fb00000014007500730062005f00630061006d005f0030003100000002840000028a0000000000000000fb0000000800630073006900300100000000000001ba0000004e00fffffffb00000010006d00610069006e005f00720067006201000001c0000002750000007400fffffffb0000000e0066006900730068006500790065010000043b000001e30000006600fffffffb00000014006d00610069006e005f006400650070007400680100000624000001fd0000008600fffffffb0000000800630073006900310100000827000001910000004e00fffffffb0000001e007200650061006c00730065006e00730065005f006400650070007400680000000503000004b50000000000000000fb0000001a007200650061006c00730065006e00730065005f00720067006200000007e8000001d00000000000000000fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000009b80000003efc0100000002fb0000000800540069006d00650100000000000009b8000003bc00fffffffb0000000800540069006d00650100000000000004500000000000000000000007c1000003b900000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Selection:
+    collapsed: false
+  Time:
+    collapsed: false
+  Tool Properties:
+    collapsed: false
+  Views:
+    collapsed: true
+  Width: 2488
+  X: 72
+  Y: 27
+  csi0:
+    collapsed: false
+  csi1:
+    collapsed: false
+  fisheye:
+    collapsed: false
+  main_depth:
+    collapsed: false
+  main_rgb:
+    collapsed: false
+  touch:
+    collapsed: false

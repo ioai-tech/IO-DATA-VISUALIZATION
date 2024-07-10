@@ -1,0 +1,7 @@
+<link name="base_link">
+    <visual>
+        <geometry>
+            <mesh filename = "package://foot_visualizer/meshes/foot.stl"/>
+        </geometry>
+    </visual>
+</link>

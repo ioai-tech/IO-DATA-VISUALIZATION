@@ -1,0 +1,18 @@
+<launch>
+
+  <!-- Launch the human node -->
+  <include file="$(find human)/launch/human.launch" />
+
+  <!-- Launch the hand_visualizer node -->
+  <node pkg="hand_visualizer" type="hand_visualizer" name="hand_visualizer" />
+
+  <!-- Launch the foot_visualizer node -->
+  <include file="$(find foot_visualizer)/launch/foot_visualizer.launch" />
+
+  <!-- Launch the images_visualizer node -->
+  <include file="$(find images_visualizer)/launch/images_visualizer.launch" />
+
+<!-- Launch rviz -->
+ <node name="rviz" pkg="rviz" type="rviz" args="-d $(find io_data_visualizer)/rviz/jetson_check.rviz" />
+
+</launch>

@@ -1,0 +1,14 @@
+<launch>
+    <!-- 设置参数 -->
+    <param name="robot_description" textfile="$(find human)/urdf/blender_human.urdf" />
+ 
+    <!-- 启动 rviz -->
+    <node name="rviz" pkg="rviz" type="rviz" />
+    <!-- transform -->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+    <!-- <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" /> -->
+    <node pkg="human" type="human" name="human" />
+    <node pkg="human" type="tf" name="tf" />
+    <node pkg="foot_visualizer" type="foot_visualizer" name="foot_visualizer" />
+    <node pkg="hand_visualizer" type="hand_visualizer" name="hand_visualizer" />
+</launch>

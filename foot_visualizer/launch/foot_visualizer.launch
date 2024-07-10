@@ -1,0 +1,11 @@
+<launch>
+ 
+    <!-- 设置参数 -->
+    <param name="foot_visualizer" textfile="$(find foot_visualizer)/urdf/foot.urdf" />
+ 
+    <!-- 启动 rviz -->
+    <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find foot_visualizer)/config/config.rviz" /> -->
+    <node pkg="foot_visualizer" type="foot_visualizer" name="foot_visualizer" />
+    <node pkg="foot_visualizer" type="foot_tf_broadcaster" name="foot_tf_broadcaster" />
+ 
+</launch>

@@ -1,0 +1,19 @@
+<launch>
+    <!-- depth_image_colourizer node -->
+    <node name="depth_image_colourizer" pkg="images_visualizer" type="depth_image_colourizer" output="screen">
+    </node>
+
+    <!-- point_cloud_generator node -->
+    <!-- <node name="point_cloud_generator" pkg="images_visualizer" type="point_cloud_generator" output="screen"> -->
+    <!-- </node> -->
+
+    <node ns="/usb_cam_01" name="usb_cam_01_decoder" pkg="images_visualizer" type="mjpeg_decoder" output="screen">
+    </node>
+
+    <node ns="/usb_cam_02" name="usb_cam_02_decoder" pkg="images_visualizer" type="mjpeg_decoder" output="screen">
+    </node>
+
+    <node ns="/usb_cam_fisheye" name="usb_cam_fisheye_decoder" pkg="images_visualizer" type="mjpeg_decoder" output="screen">
+    </node>
+
+</launch>
