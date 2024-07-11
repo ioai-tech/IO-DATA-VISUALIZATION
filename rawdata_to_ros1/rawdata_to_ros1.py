@@ -6,7 +6,8 @@ import cv2
 import rospy
 from sensor_msgs.msg import Image
 from sensor_msgs.msg import CompressedImage
-
+from sensor_msgs.msg import JointState
+from std_msgs.msg import String
 from io_mocap.msg import mocap_data
 from io_mocap.msg import touch
 
@@ -61,6 +62,9 @@ HAPTIC_FRAME_NAMES = ["left_hand", "right_hand", "left_foot", "right_foot"]
 if __name__ == "__main__":
     rospy.init_node("rawdata_to_ros1")
     input_folder = sys.argv[1]
+    pub_mocap = True  # use mocap data or joint_states data to vis human movement
+    if len(sys.argv) > 2:
+        pub_mocap = sys.argv[2] == "True"
     image_frame_names = []
     image_publishers = {
         "cam_rgb": rospy.Publisher(
@@ -77,9 +81,20 @@ if __name__ == "__main__":
             "/usb_cam_fisheye/image_decoded/compressed", CompressedImage, queue_size=2
         ),
     }
-    mocap_publishers = {name: rospy.Publisher("/mocap_" + name, mocap_data, queue_size=2) for name in MOCAP_FRAME_NAMES}
-    haptic_publishers = {name: rospy.Publisher("/touch_" + name, touch, queue_size=2) for name in HAPTIC_FRAME_NAMES}
-    
+    mocap_publishers = {
+        name: rospy.Publisher("/mocap_" + name, mocap_data, queue_size=2)
+        for name in MOCAP_FRAME_NAMES
+    }
+    human_joint_states_publisher = rospy.Publisher(
+        "/joint_states", JointState, queue_size=2
+    )
+    haptic_publishers = {
+        name: rospy.Publisher("/touch_" + name, touch, queue_size=2)
+        for name in HAPTIC_FRAME_NAMES
+    }
+    task_description_publisher = rospy.Publisher(
+        "/task_description", String, queue_size=2
+    )
     annotation = json.load(open(os.path.join(input_folder, "annotation.json")))
     start_frame = int(annotation["start_frame_id"])
     end_frame = int(annotation["end_frame_id"])
@@ -102,7 +117,7 @@ if __name__ == "__main__":
                             os.path.join(input_folder, IMAGE_FOLDER[image_type], name),
                             cv2.IMREAD_ANYDEPTH,
                         )
-                        
+
     frames["mocap"] = [{} for _ in range(end_frame - start_frame + 1)]
     for mocap_frame in MOCAP_FRAME_NAMES:
         csv_filepath = os.path.join(input_folder, "mocap", mocap_frame + ".csv")
@@ -111,6 +126,17 @@ if __name__ == "__main__":
             for index, line in enumerate(lines):
                 data = line.split(",")
                 frames["mocap"][index][mocap_frame] = [float(x) for x in data]
+    frames["joint_states"] = [[] for _ in range(end_frame - start_frame + 1)]
+    csv_filepath = os.path.join(input_folder, "joint_states.csv")
+    with open(csv_filepath) as f:
+        lines = [x.strip() for x in f.readlines() if x.strip()]
+        for index, line in enumerate(lines):
+            if index == 0:
+                human_joint_names = line.split(",")[1:]
+                assert len(human_joint_names) == 177  # 59 shpere joints
+                continue
+            data = line.split(",")[1:]
+            frames["joint_states"][index - 1] = [float(x) for x in data]
     frames["haptic"] = [{} for _ in range(end_frame - start_frame + 1)]
     for haptic_frame in HAPTIC_FRAME_NAMES:
         csv_filepath = os.path.join(input_folder, "haptics", haptic_frame + ".csv")
@@ -119,13 +145,22 @@ if __name__ == "__main__":
             for index, line in enumerate(lines):
                 data = line.split(",")
                 frames["haptic"][index][haptic_frame] = [int(x) for x in data]
-
-    print("Start publishing images")
+    assert (
+        len(frames["image"])
+        == len(frames["mocap"])
+        == len(frames["joint_states"])
+        == len(frames["haptic"])
+    )
+    label = annotation["description"]
+    task_description_publisher.publish(String(data=str(label)))
+    # print("Start publishing images")
     for index in range(end_frame - start_frame + 1):
+        if rospy.is_shutdown():
+            break
         now = rospy.Time.now()
-        print("publish", index)
-        frame = frames["image"][index]
+        # print("publish", index)
         for image_type in IMAGE_FOLDER:
+            frame = frames["image"][index]
             if image_type != "cam_depth":
                 if image_type in frame and frame[image_type] is not None:
                     image = frame[image_type]
@@ -150,18 +185,29 @@ if __name__ == "__main__":
                     msg.is_bigendian = False
                     msg.data = image.tobytes()
                     image_publishers[image_type].publish(msg)
-        frame = frames["mocap"][index]
-        for mocap_frame in MOCAP_FRAME_NAMES:
-            if mocap_frame in frame and frame[mocap_frame] is not None:
-                msg = mocap_data()
-                msg.header.stamp = now
-                msg.header.frame_id = mocap_frame.replace("_", "-")
-                msg.header.seq = index
-                if len(frame[mocap_frame]) < 6:
-                    continue
-                joint_quat = frame[mocap_frame][2:6]
-                msg.joint_quaternion = joint_quat
-                mocap_publishers[mocap_frame].publish(msg)
+        if pub_mocap:
+            frame = frames["mocap"][index]
+            for mocap_frame in MOCAP_FRAME_NAMES:
+                if mocap_frame in frame and frame[mocap_frame] is not None:
+                    msg = mocap_data()
+                    msg.header.stamp = now
+                    msg.header.frame_id = mocap_frame.replace("_", "-")
+                    msg.header.seq = index
+                    if len(frame[mocap_frame]) < 6:
+                        continue
+                    joint_quat = frame[mocap_frame][2:6]
+                    msg.joint_quaternion = joint_quat
+                    mocap_publishers[mocap_frame].publish(msg)
+        else:
+            # print("pub joint_states")
+            frame = frames["joint_states"][index]
+            msg = JointState()
+            msg.header.stamp = now
+            msg.header.frame_id = "base_link"
+            msg.header.seq = index
+            msg.name = human_joint_names
+            msg.position = frame
+            human_joint_states_publisher.publish(msg)
         frame = frames["haptic"][index]
         for haptic_frame in HAPTIC_FRAME_NAMES:
             if haptic_frame in frame and frame[haptic_frame] is not None:

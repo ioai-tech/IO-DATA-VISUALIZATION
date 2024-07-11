@@ -1,20 +1,20 @@
 Panels:
   - Class: rviz/Displays
-    Help Height: 78
+    Help Height: 0
     Name: Displays
     Property Tree Widget:
       Expanded:
         - /Global Options1
         - /Status1
         - /MarkerArray1
-        - /realsense_rgb1
-        - /usb_cam_011
-        - /usb_cam_021
-        - /realsense_depth1
+        - /RobotModel1
         - /fisheye1
-        - /PointCloud21
+        - /main_depth1
+        - /TF1/Frames1
+        - /TF1/Tree1
+        - /TaskDescription1
       Splitter Ratio: 0.5
-    Tree Height: 814
+    Tree Height: 703
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -32,7 +32,7 @@ Panels:
   - Class: rviz/Time
     Name: Time
     SyncMode: 0
-    SyncSource: usb_cam_02
+    SyncSource: touch
 Preferences:
   PromptSaveOnExit: true
 Toolbars:
@@ -859,55 +859,7 @@ Visualization Manager:
       Visual Enabled: true
     - Class: rviz/Image
       Enabled: true
-      Image Topic: /realsense/color/image_raw
-      Max Value: 1
-      Median window: 5
-      Min Value: 0
-      Name: realsense_rgb
-      Normalize Range: true
-      Queue Size: 2
-      Transport Hint: raw
-      Unreliable: false
-      Value: true
-    - Class: rviz/Image
-      Enabled: true
-      Image Topic: /usb_cam_01/image_raw
-      Max Value: 1
-      Median window: 5
-      Min Value: 0
-      Name: usb_cam_01
-      Normalize Range: true
-      Queue Size: 2
-      Transport Hint: compressed
-      Unreliable: false
-      Value: true
-    - Class: rviz/Image
-      Enabled: true
-      Image Topic: /usb_cam_02/image_raw
-      Max Value: 1
-      Median window: 5
-      Min Value: 0
-      Name: usb_cam_02
-      Normalize Range: true
-      Queue Size: 2
-      Transport Hint: compressed
-      Unreliable: false
-      Value: true
-    - Class: rviz/Image
-      Enabled: true
-      Image Topic: /depth/image_coloured
-      Max Value: 1
-      Median window: 5
-      Min Value: 0
-      Name: realsense_depth
-      Normalize Range: true
-      Queue Size: 2
-      Transport Hint: raw
-      Unreliable: false
-      Value: true
-    - Class: rviz/Image
-      Enabled: true
-      Image Topic: /usb_cam_fisheye/image_raw
+      Image Topic: /usb_cam_fisheye/image_decoded
       Max Value: 1
       Median window: 5
       Min Value: 0
@@ -917,34 +869,102 @@ Visualization Manager:
       Transport Hint: compressed
       Unreliable: false
       Value: true
-    - Alpha: 1
-      Autocompute Intensity Bounds: true
-      Autocompute Value Bounds:
-        Max Value: 10
-        Min Value: -10
-        Value: true
-      Axis: Z
-      Channel Name: intensity
-      Class: rviz/PointCloud2
-      Color: 255; 255; 255
-      Color Transformer: RGB8
-      Decay Time: 0
-      Enabled: false
-      Invert Rainbow: false
-      Max Color: 255; 255; 255
-      Min Color: 0; 0; 0
-      Name: PointCloud2
-      Position Transformer: XYZ
-      Queue Size: 10
-      Selectable: true
-      Size (Pixels): 3
-      Size (m): 0.009999999776482582
-      Style: Flat Squares
-      Topic: /generated_point_cloud
+    - Class: rviz/Image
+      Enabled: true
+      Image Topic: /color/image_raw
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: main_rgb
+      Normalize Range: true
+      Queue Size: 2
+      Transport Hint: compressed
       Unreliable: false
-      Use Fixed Frame: true
-      Use rainbow: true
+      Value: true
+    - Class: rviz/Image
+      Enabled: true
+      Image Topic: /csi_camera_0/image_raw
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: csi0
+      Normalize Range: true
+      Queue Size: 2
+      Transport Hint: compressed
+      Unreliable: false
+      Value: true
+    - Class: rviz/Image
+      Enabled: true
+      Image Topic: /csi_camera_1/image_raw
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: csi1
+      Normalize Range: true
+      Queue Size: 2
+      Transport Hint: compressed
+      Unreliable: false
+      Value: true
+    - Class: rviz/Image
+      Enabled: true
+      Image Topic: /depth/image_raw
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: main_depth
+      Normalize Range: true
+      Queue Size: 2
+      Transport Hint: raw
+      Unreliable: false
+      Value: true
+    - Class: rviz/TF
+      Enabled: false
+      Filter (blacklist): ""
+      Filter (whitelist): ""
+      Frame Timeout: 15
+      Frames:
+        All Enabled: false
+      Marker Alpha: 1
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        {}
+      Update Interval: 0
       Value: false
+    - Class: rviz/Image
+      Enabled: true
+      Image Topic: /hand_visual
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: touch
+      Normalize Range: true
+      Queue Size: 2
+      Transport Hint: raw
+      Unreliable: false
+      Value: true
+    - Align Bottom: false
+      Background Alpha: 0.800000011920929
+      Background Color: 0; 0; 0
+      Class: jsk_rviz_plugin/String
+      Enabled: true
+      Foreground Alpha: 0.800000011920929
+      Foreground Color: 25; 255; 240
+      Name: TaskDescription
+      Overtake Color Properties: false
+      Overtake Position Properties: true
+      Topic: /task_description
+      Value: true
+      font: DejaVu Sans Mono
+      height: 50
+      left: 0
+      line width: 2
+      text size: 30
+      top: 0
+      width: 3000
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -973,7 +993,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 4.97556734085083
+      Distance: 3.163188934326172
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -981,25 +1001,25 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: -0.3089420199394226
-        Y: -0.08258537948131561
-        Z: 0.2768516540527344
+        X: -0.07727443426847458
+        Y: -0.3218933343887329
+        Z: 0.8212102651596069
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.44539839029312134
+      Pitch: 0.31539827585220337
       Target Frame: <Fixed Frame>
-      Yaw: 3.105397939682007
+      Yaw: 1.1503945589065552
     Saved: ~
 Window Geometry:
   Displays:
     collapsed: false
-  Height: 1536
+  Height: 1376
   Hide Left Dock: false
   Hide Right Dock: true
-  QMainWindow State: 000000ff00000000fd000000040000000000000156000003b9fc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c00610079007301000001e6000003b9000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f00000562fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000003d00000562000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b2000000000000000000000002000009b8000001a3fc0100000006fb00000014007500730062005f00630061006d005f003000320100000000000002050000008800fffffffb00000014007500730062005f00630061006d005f00300031010000020b0000020e0000008800fffffffb0000000e0066006900730068006500790065010000041f000001ec0000006600fffffffb0000001e007200650061006c00730065006e00730065005f006400650070007400680100000611000001d1000000a500fffffffb0000001a007200650061006c00730065006e00730065005f00720067006201000007e8000001d00000009400fffffffb0000000a00560069006500770073030000004e00000080000002e10000019700000003000009b80000003efc0100000002fb0000000800540069006d00650100000000000009b8000003bc00fffffffb0000000800540069006d006501000000000000045000000000000000000000085c000003b900000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000400000000000001f100000319fc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afc000001e600000319000000e60100001cfa000000000100000002fb0000000a0074006f0075006300680100000000ffffffff0000005b00fffffffb000000100044006900730070006c0061007900730100000000000001f10000015600fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f00000562fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000003d00000562000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b2000000000000000000000002000009b8000001a3fc010000000afb00000014007500730062005f00630061006d005f003000320000000000000003640000000000000000fb00000014007500730062005f00630061006d005f0030003100000002840000028a0000000000000000fb0000000800630073006900300100000000000001ba0000004e00fffffffb00000010006d00610069006e005f00720067006201000001c0000002750000007400fffffffb0000000e0066006900730068006500790065010000043b000001e30000006600fffffffb00000014006d00610069006e005f006400650070007400680100000624000001fd0000008600fffffffb0000000800630073006900310100000827000001910000004e00fffffffb0000001e007200650061006c00730065006e00730065005f006400650070007400680000000503000004b50000000000000000fb0000001a007200650061006c00730065006e00730065005f00720067006200000007e8000001d00000000000000000fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000009b80000003efc0100000002fb0000000800540069006d00650100000000000009b8000003bc00fffffffb0000000800540069006d00650100000000000004500000000000000000000007c10000031900000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -1011,13 +1031,15 @@ Window Geometry:
   Width: 2488
   X: 72
   Y: 27
+  csi0:
+    collapsed: false
+  csi1:
+    collapsed: false
   fisheye:
     collapsed: false
-  realsense_depth:
+  main_depth:
     collapsed: false
-  realsense_rgb:
+  main_rgb:
     collapsed: false
-  usb_cam_01:
-    collapsed: false
-  usb_cam_02:
+  touch:
     collapsed: false

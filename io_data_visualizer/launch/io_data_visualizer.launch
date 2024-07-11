@@ -13,6 +13,6 @@
   <include file="$(find images_visualizer)/launch/images_visualizer.launch" />
 
 <!-- Launch rviz -->
- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find io_data_visualizer)/rviz/jetson_check.rviz" />
+ <node name="rviz" pkg="rviz" type="rviz" args="-d $(find io_data_visualizer)/rviz/default.rviz" />
 
 </launch>
