@@ -1,4 +1,4 @@
-# IO—DATA-VISUALIZATION
+# IO-DATA-VISUALIZATION
 
 ## Install Dependencies
 
