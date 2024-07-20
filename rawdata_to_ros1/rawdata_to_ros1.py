@@ -68,9 +68,9 @@ if __name__ == "__main__":
     image_frame_names = []
     image_publishers = {
         "cam_rgb": rospy.Publisher(
-            "/color/image_raw/compressed", CompressedImage, queue_size=2
+            "/rgbd/color/image_raw/compressed", CompressedImage, queue_size=2
         ),
-        "cam_depth": rospy.Publisher("/depth/image_raw", Image, queue_size=2),
+        "cam_depth": rospy.Publisher("/rgbd/depth/image_raw", Image, queue_size=2),
         "cam_left": rospy.Publisher(
             "/csi_camera_0/image_raw/compressed", CompressedImage, queue_size=2
         ),
@@ -78,7 +78,7 @@ if __name__ == "__main__":
             "/csi_camera_1/image_raw/compressed", CompressedImage, queue_size=2
         ),
         "cam_fisheye": rospy.Publisher(
-            "/usb_cam_fisheye/image_decoded/compressed", CompressedImage, queue_size=2
+            "/usb_cam_fisheye/mjpeg_raw/compressed", CompressedImage, queue_size=2
         ),
     }
     mocap_publishers = {
