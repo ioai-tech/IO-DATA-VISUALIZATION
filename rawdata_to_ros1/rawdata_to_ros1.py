@@ -13,7 +13,7 @@ from io_mocap.msg import touch
 
 IMAGE_FOLDER = {
     "cam_rgb": "images/cam_rgb",
-    "cam_depth": "images/cam_depth",
+    # "cam_depth": "images/cam_depth",
     "cam_left": "images/cam_left",
     "cam_right": "images/cam_right",
     "cam_fisheye": "images/cam_fisheye",
@@ -120,37 +120,35 @@ if __name__ == "__main__":
 
     frames["mocap"] = [{} for _ in range(end_frame - start_frame + 1)]
     for mocap_frame in MOCAP_FRAME_NAMES:
-        csv_filepath = os.path.join(input_folder, "mocap", mocap_frame + ".csv")
-        with open(csv_filepath) as f:
-            lines = [x.strip() for x in f.readlines()[1:] if x.strip()]
-            for index, line in enumerate(lines):
-                data = line.split(",")
-                frames["mocap"][index][mocap_frame] = [float(x) for x in data]
+        csv_filepath = os.path.join(input_folder, mocap_frame + ".csv")
+        if os.path.exists(csv_filepath):
+            with open(csv_filepath) as f:
+                lines = [x.strip() for x in f.readlines()[1:] if x.strip()]
+                for index, line in enumerate(lines):
+                    data = line.split(",")
+                    frames["mocap"][index][mocap_frame] = [float(x) for x in data]
     frames["joint_states"] = [[] for _ in range(end_frame - start_frame + 1)]
     csv_filepath = os.path.join(input_folder, "joint_states.csv")
-    with open(csv_filepath) as f:
-        lines = [x.strip() for x in f.readlines() if x.strip()]
-        for index, line in enumerate(lines):
-            if index == 0:
-                human_joint_names = line.split(",")[1:]
-                assert len(human_joint_names) == 177  # 59 shpere joints
-                continue
-            data = line.split(",")[1:]
-            frames["joint_states"][index - 1] = [float(x) for x in data]
+    if os.path.exists(csv_filepath):
+        with open(csv_filepath) as f:
+            lines = [x.strip() for x in f.readlines() if x.strip()]
+            for index, line in enumerate(lines):
+                if index == 0:
+                    human_joint_names = line.split(",")[1:]
+                    assert len(human_joint_names) == 177  # 59 shpere joints
+                    continue
+                data = line.split(",")[1:]
+                frames["joint_states"][index - 1] = [float(x) for x in data]
     frames["haptic"] = [{} for _ in range(end_frame - start_frame + 1)]
     for haptic_frame in HAPTIC_FRAME_NAMES:
         csv_filepath = os.path.join(input_folder, "haptics", haptic_frame + ".csv")
-        with open(csv_filepath) as f:
-            lines = [x.strip() for x in f.readlines()[1:] if x.strip()]
-            for index, line in enumerate(lines):
-                data = line.split(",")
-                frames["haptic"][index][haptic_frame] = [int(x) for x in data]
-    assert (
-        len(frames["image"])
-        == len(frames["mocap"])
-        == len(frames["joint_states"])
-        == len(frames["haptic"])
-    )
+        if os.path.exists(csv_filepath):
+            with open(csv_filepath) as f:
+                lines = [x.strip() for x in f.readlines()[1:] if x.strip()]
+                for index, line in enumerate(lines):
+                    data = line.split(",")
+                    frames["haptic"][index][haptic_frame] = [int(x) for x in data]
+                    
     label = annotation["description"]
     task_description_publisher.publish(String(data=str(label)))
     # print("Start publishing images")
